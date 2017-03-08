@@ -1,0 +1,27 @@
+// .deb uzantılı teamviewer kurulum paketini indirdikten; kurmak için
+
+https://community.teamviewer.com/t5/TeamViewer-12/team-viewer-does-not-open-on-debian-8/m-p/1669
+
+Sitesinden bulduğum çözümü aktarıyorum
+/*******************************************************
+Let's clean up your system from TeamViewer previous traces and install the software.
+
+Please use the following commands to solve your issue.
+
+cd /
+# find . -name *teamviewer* -exec rm -rf {} \;
+#cd ~
+#wget download.teamviewer.com/download/teamviewer_i386.deb //Ben de zaten vardı yeniden indirmedim
+#sudo dpkg -i teamviewer_i386.deb //Bende ola sürümü idi v12.0.71510 (deb 32-Bit / 64-Bit Multiarch)
+#sudo apt-get install -f -y //Bunu yapınca normalde aldığım kayıp kütüphane problemi ortadan kalkmış oldu
+
+The open TeamViewer you may use the following command
+
+#teamviewer & //Çalıştabilirsiniz
+
+Hope that solution works for you.
+
+Best regards,
+
+Christian
+***********************************************************/
